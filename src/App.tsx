@@ -1,11 +1,9 @@
 import { Button } from "./components/Button/index";
 
-function App() {
+export const App = () => {
   return (
     <>
-      <Button onClick={() => console.log('Click')}> Hello </Button>
+      <Button onClick={() => console.log("Click")}> Hello </Button>
     </>
   );
-}
-
-export default App;
+};
