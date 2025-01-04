@@ -1,15 +1,18 @@
 .button {
   border-radius: 8px;
-  border: 1px solid transparent;
   padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #28257c;
+  font-family: var(--font);
   cursor: pointer;
   transition: border-color 0.25s;
-  width: 100%;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+
+  color: var(--white-color);
+}
+.accent {
+  background: var(--primary-hover-color);
 }
 .accent:hover {
-  border-color: #646cff;
+  background: var(--primary-color);
 }
