@@ -8,4 +8,4 @@ export const App = () => {
       <Input placeholder="email" />
     </>
   );
-};
+}; 
