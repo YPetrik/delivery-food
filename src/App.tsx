@@ -1,6 +1,7 @@
 import { Button } from "./components/Button/index";
 import { Input } from "./components/Input/index";
 
+
 export const App = () => {
   return (
     <>
@@ -8,4 +9,4 @@ export const App = () => {
       <Input placeholder="email" />
     </>
   );
-}; 
+};
