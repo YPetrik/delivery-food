@@ -50,7 +50,7 @@
 }
 
 .link:hover {
-    color: var(--primary-hover-color);
+  color: var(--primary-hover-color);
 }
 
 .img {
@@ -67,4 +67,8 @@
 
 .exit-img {
   width: 30px;
+}
+
+.active {
+  color: var(--primary-hover-color);
 }
