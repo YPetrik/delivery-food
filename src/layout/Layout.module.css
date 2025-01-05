@@ -1,0 +1,70 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  padding: 30px;
+  border-right: 1px solid var(--separator-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.user {
+  margin-bottom: 46px;
+}
+
+.avatar {
+  width: 125px;
+  padding: 30px 0px 30px 40px;
+}
+
+.name {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: var(--text-color);
+}
+
+.email {
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #9ea1b1;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.link:hover {
+    color: var(--primary-hover-color);
+}
+
+.img {
+  width: 20px;
+}
+
+.exit-btn {
+  margin-top: auto;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.exit-img {
+  width: 30px;
+}
