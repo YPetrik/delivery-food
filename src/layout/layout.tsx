@@ -40,7 +40,7 @@ export const Layout = () => {
           <img className={style["exit-img"]} src="/public/exit.svg" alt="exit" /> Выход
         </Button>
       </div>
-      <div>
+      <div className={style["content"]}>
         <Outlet />
       </div>
     </div>
