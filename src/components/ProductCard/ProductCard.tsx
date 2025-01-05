@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 export const ProductCard = (props: IProductCardProps) => {
   const { id, title, description, image, price, rating } = props;
   return (
-    <Link className={style["link"]} to={"/"}>
-      <div className={style["card"]}>
+    <Link className={style["link"]} to={`/product/${id}`}>
+      <div className={style["card"]}> 
         <div
           className={style["head"]}
           style={{ backgroundImage: `url(${image})`, borderRadius: "20px", width: "310px" }}

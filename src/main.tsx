@@ -5,6 +5,7 @@ import { Menu } from "./pages/Menu/index";
 import { Cart } from "./pages/Cart/index";
 import { ErrorPage } from "./pages/ErrorPage/index";
 import { Layout } from "./layout/index";
+import { Product } from "./pages/Product/index";
 
 import "./index.css";
 const router = createBrowserRouter([
@@ -19,7 +20,11 @@ const router = createBrowserRouter([
       {
         path: "/cart",
         element: <Cart />,
-      }, 
+      },
+      {
+        path: "/product/:id",
+        element: <Product />,
+      },
     ],
   },
 
