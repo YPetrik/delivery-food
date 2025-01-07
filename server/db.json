@@ -1,0 +1,68 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "name": "Karbonara",
+      "price": 300,
+      "ingredients": ["салями", "болгарский перец", "помидоры", "оливки", "пикантная пепперони"],
+      "image": "../public/karbonara.png",
+      "rating": 4.6
+    },
+    {
+      "id": 2,
+      "name": "BBQ",
+      "price": 220,
+      "ingredients": ["bbq", "руккола", "пармезан", "оливки"],
+      "image": "../public/bbq.webp",
+      "rating": 4.7
+    },
+    {
+      "id": 3,
+      "name": "Бефстроганов",
+      "price": 190,
+      "ingredients": ["сыр", "винный уксус", "моцарелла", "оливки"],
+      "image": "../public/karbonara.png",
+      "rating": 4.1
+    },
+    {
+      "id": 4,
+      "name": "Pepperoni",
+      "price": 311,
+      "ingredients": ["салями", "руккола", "помидоры", "оливки"],
+      "image": "../public/pepperoni.webp",
+      "rating": 4.6
+    },
+    {
+      "id": 5,
+      "name": "Говядина с песто",
+      "price": 300,
+      "ingredients": ["твердый сыр", "голубой сыр", "помидоры", "ветчина"],
+      "image": "../public/karbonara.png",
+      "rating": 4.7
+    },
+    {
+      "id": 6,
+      "name": "Ricca",
+      "price": 300,
+      "ingredients": ["салями", "оливковое масло", "помидоры", "оливки"],
+      "image": "../public/picca.webp",
+      "rating": 4.9
+    },
+    {
+      "id": 7,
+      "name": "Кола-барбекю",
+      "price": 300,
+      "ingredients": ["красный лук", "руккола", "фирменный томатный соус", "оливки"],
+      "image": "../public/pepperoni.webp",
+      "rating": 3.3
+    },
+    {
+      "id": 8,
+      "name": "Чоризо фреш",
+      "price": 300,
+      "ingredients": ["шпинат", "чеснок", "помидоры", "моцарелла"],
+      "image": "../public/bbq.webp",
+      "rating": 3.5
+    }
+  ]
+}
