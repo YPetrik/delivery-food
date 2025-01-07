@@ -3,10 +3,10 @@ import style from "./ProductCard.module.css";
 import { Link } from "react-router-dom";
 
 export const ProductCard = (props: IProductCardProps) => {
-  const { id, title, description, image, price, rating } = props;
+  const { id, name, description, image, price, rating } = props;
   return (
     <Link className={style["link"]} to={`/product/${id}`}>
-      <div className={style["card"]}> 
+      <div className={style["card"]}>
         <div
           className={style["head"]}
           style={{ backgroundImage: `url(${image})`, borderRadius: "20px", width: "310px" }}
@@ -27,7 +27,7 @@ export const ProductCard = (props: IProductCardProps) => {
           </div>
         </div>
         <div className={style["footer"]}>
-          <div className={style["title"]}>{title}</div>
+          <div className={style["title"]}>{name}</div>
           <div className={style["description"]}>{description}</div>
         </div>
       </div>
