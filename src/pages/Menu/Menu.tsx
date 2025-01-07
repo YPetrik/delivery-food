@@ -5,28 +5,24 @@ import { Search } from "../../components/Search/index";
 import { PREFIX } from "../../../server/helpers/api";
 import { IProduct } from "../../interfaces/product.interface";
 import style from "./Menu.module.css";
+import axios from "axios";
 
 export const Menu = () => {
   const [products, setProducts] = useState<IProduct[]>([]);
 
   const getMenu = async () => {
-    const response = await fetch(`${PREFIX}/products`).catch((e) => {
-      console.log(`Случилась беда -> ${e}`);
-      return;
-    });
-
-    if (!response?.ok) {
+    try {
+      const { data } = await axios.get<IProduct[]>(`${PREFIX}/products`);
+      setProducts(data);
+    } catch (error) {
+      console.log(error);
       return;
     }
-    const data = (await response.json()) as IProduct[];
-    setProducts(data);
   };
 
   useEffect(() => {
     getMenu();
   }, []);
-
-  console.log("products", products);
 
   return (
     <>
@@ -35,7 +31,7 @@ export const Menu = () => {
         <Search className={style[""]} placeholder="Введите блюдо или состав" />
       </div>
       <div className={style["product-card"]}>
-        {products.map((item) => (
+        {products?.map((item) => (
           <ProductCard
             id={item.id}
             name={item.name}
