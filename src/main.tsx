@@ -33,6 +33,7 @@ const router = createBrowserRouter([
       {
         path: "/product/:id",
         element: <Product />,
+        errorElement: <>Ошибка</>, // Сюда можно передать компонент с отображением красивой страницы
         loader: handleParamsLoader,
       },
     ],
