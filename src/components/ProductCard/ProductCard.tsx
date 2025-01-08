@@ -2,7 +2,7 @@ import { IProductCardProps } from "./ProductCard.props";
 import style from "./ProductCard.module.css";
 import { Link } from "react-router-dom";
 
-export const ProductCard = (props: IProductCardProps) => {
+export const  ProductCard = (props: IProductCardProps) => {
   const { id, name, description, image, price, rating } = props;
   return (
     <Link className={style["link"]} to={`/product/${id}`}>
