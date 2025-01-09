@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { Button } from "../../components/Button/index";
 import { Headling } from "../../components/Headling/index";
@@ -16,6 +16,7 @@ interface ILoginForm {
 }
 
 export const Login = () => {
+  const navigate = useNavigate();
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const target = event.target as typeof event.target & ILoginForm;
@@ -27,6 +28,12 @@ export const Login = () => {
   const handleSendLogin = (email: string, password: string) => {
     if (email.length >= 3 && password.length >= 3) {
       console.log("Успешно залогинились");
+      localStorage.setItem(
+        "jwt",
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+      );
+
+      navigate("/");
     } else {
       console.log("email и password должные быть дленее 3-х символов");
     }
