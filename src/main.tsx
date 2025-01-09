@@ -17,6 +17,7 @@ import { IProduct } from "./interfaces/product.interface";
 import { PREFIX } from "../server/helpers/api";
 
 import "./index.css";
+import RequireAuth from "../server/helpers/RequireAuth";
 
 const Menu = lazy(() => import("./pages/Menu/index"));
 
@@ -28,7 +29,11 @@ const handleParamsLoader = async ({ params }: LoaderFunctionArgs) => {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />,
+    element: (
+      <RequireAuth>
+        <Layout />
+      </RequireAuth>
+    ),
     children: [
       {
         path: "/",

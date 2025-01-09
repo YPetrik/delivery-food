@@ -64,5 +64,6 @@
       "image": "../public/bbq.webp",
       "rating": 3.5
     }
-  ]
+  ],
+  "login": [{ "email": "yuriy.petrik@mail.ru", "password": "123456" }]
 }
