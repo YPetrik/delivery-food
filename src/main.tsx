@@ -18,6 +18,8 @@ import { PREFIX } from "../server/helpers/api";
 
 import "./index.css";
 import RequireAuth from "../server/helpers/RequireAuth";
+import { Provider } from "react-redux";
+import { store } from "./store/store";
 
 const Menu = lazy(() => import("./pages/Menu/index"));
 
@@ -70,6 +72,8 @@ const router = createBrowserRouter([
 ]);
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </StrictMode>
 );
