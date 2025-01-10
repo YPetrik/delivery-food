@@ -35,7 +35,6 @@ export const Login = () => {
   const handleSendLogin = (email: string, password: string) => {
     if (email.length >= 3 && password.length >= 3) {
       console.log("Успешно залогинились");
-      localStorage.setItem("jwt", JWT);
       dispatch(userActions.addJwt(JWT));
 
       navigate("/");
