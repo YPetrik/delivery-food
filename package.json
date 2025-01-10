@@ -4,11 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "server": "json-server -w server/db.json"
+    "dev": "vite",
+    "server": "json-server -w server/db.json", 
+    "start-all": "npm run dev & npm run server"
+    
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.5.0",

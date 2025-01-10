@@ -29,6 +29,7 @@ export const MenuList = () => {
     <div className={style["product-card"]}>
       {products?.map((item) => (
         <ProductCard
+          key={item.id}
           id={item.id}
           name={item.name}
           description={item.description.join(", ")}
