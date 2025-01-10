@@ -5,6 +5,9 @@ import { Headling } from "../../components/Headling/index";
 import { Input } from "../../components/Input/index";
 
 import style from "./Login.module.css";
+import { useDispatch } from "react-redux";
+import { AppDispatch } from "../../store/store";
+import { userActions } from "../../store/user.slice";
 
 interface ILoginForm {
   email: {
@@ -15,8 +18,12 @@ interface ILoginForm {
   };
 }
 
+const JWT =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c";
+
 export const Login = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch<AppDispatch>();
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const target = event.target as typeof event.target & ILoginForm;
@@ -28,10 +35,8 @@ export const Login = () => {
   const handleSendLogin = (email: string, password: string) => {
     if (email.length >= 3 && password.length >= 3) {
       console.log("Успешно залогинились");
-      localStorage.setItem(
-        "jwt",
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
-      );
+      localStorage.setItem("jwt", JWT);
+      dispatch(userActions.addJwt(JWT));
 
       navigate("/");
     } else {
